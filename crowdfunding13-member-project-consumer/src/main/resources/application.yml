@@ -1,10 +1,10 @@
 aliyun:
   oss:
-    endPoint: http://oss-cn-beijing.aliyuncs.com
-    bucketName: crowdfunding-dzc
-    accessKeyId: LTAI4GF2S2S6KK6h9pyjhEtz
-    accessKeySecret: C1DartUYaBDhmNH9ZBLJdAYkU914Zp
-    bucketDomain: http://crowdfunding-dzc.oss-cn-beijing.aliyuncs.com
+    endPoint: 
+    bucketName: 
+    accessKeyId: 
+    accessKeySecret: 
+    bucketDomain: 
 
 spring:
   application:
