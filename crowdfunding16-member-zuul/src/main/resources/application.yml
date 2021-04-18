@@ -1,0 +1,29 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: dzc-crowd-zuul
+  redis:
+    host: 192.168.154.101
+  session:
+    store-type: redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/
+zuul:
+  ignored-services: "*"
+  sensitive-headers: "*"
+  routes:
+    crowd-portal:
+      service-id: dzc-crowd-auth
+      path: /**
+    crowd-projct:
+      service-id: dzc-crowd-project
+      path: /project/**
+    crowd-order:
+      service-id: dzc-crowd-order
+      path: /order/**
+    crowd-pay:
+      service-id: dzc-crowd-pay
+      path: /pay/**

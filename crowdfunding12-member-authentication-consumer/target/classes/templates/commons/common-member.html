@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="navbar-wrapper" th:fragment="navbar">
+    <div class="container" th:if="${session.loginMember}!=null">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div th:replace="/commons/common-head::navbar-header"></div>
+                <div id="navbar" class="navbar-collapse collapse" style="float:right;">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                                    class="glyphicon glyphicon-user"></i> [[${session.loginMember.username}]]<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="member.html" th:href="@{auth/member/to/center/page}"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 消息</a></li>
+                                <li class="divider"></li>
+                                <li><a href="index.html" th:href="@{auth/do/member/logout}"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container" th:if="${session.loginMember}==null">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div th:replace="/commons/common-head::navbar-header"></div>
+                <div id="navbar" class="navbar-collapse collapse" style="float:right;">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="login.html" th:href="@{/auth/member/to/login/page}">登录</a></li>
+                        <li><a href="reg.html" th:href="@{/auth/member/to/reg/page.html}">注册</a></li>
+                        <li><a>|</a></li>
+                        <li><a href="admin-login.html">管理员入口</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="col-sm-3 col-md-3 column" th:fragment="sidebar">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="thumbnail" style="    border-radius: 0px;">
+                <img src="img/services-box1.jpg" class="img-thumbnail" alt="">
+                <div class="caption" style="text-align:center;">
+                    <h3>
+                        [[${session.loginMember.username}]]
+                    </h3>
+                    <span class="label label-danger" style="cursor:pointer;"
+                          onclick="window.location.href='accttype.html'">未实名认证</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="list-group" th:if="${memberpage}=='center'">
+        <div class="list-group-item active">
+            资产总览<span class="badge"><i class="glyphicon glyphicon-chevron-right"></i></span>
+        </div>
+        <div class="list-group-item " style="cursor:pointer;"
+             onclick="window.location.href='html'" th:onclick="'window.location.href=\'' + @{/member/my/crowd} + '\''">
+            我的众筹<span class="badge"><i class="glyphicon glyphicon-chevron-right"></i></span>
+        </div>
+    </div>
+    <div class="list-group" th:if="${memberpage}=='crowd'">
+        <div class="list-group-item" style="cursor:pointer;" onclick="window.location.href='member.html'"
+             th:onclick="'window.location.href=\'' + @{/auth/member/to/center/page} + '\''">
+            资产总览<span class="badge"><i class="glyphicon glyphicon-chevron-right"></i></span>
+        </div>
+        <div class="list-group-item active">
+            我的众筹<span class="badge"><i class="glyphicon glyphicon-chevron-right"></i></span>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top:20px;" th:fragment="footer">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div id="footer">
+                <div class="footerNav">
+                    <a rel="nofollow" href="http://www.atguigu.com">关于我们</a> | <a rel="nofollow"
+                                                                                  href="http://www.atguigu.com">服务条款</a>
+                    | <a rel="nofollow" href="http://www.atguigu.com">免责声明</a> | <a rel="nofollow"
+                                                                                    href="http://www.atguigu.com">网站地图</a>
+                    | <a rel="nofollow" href="http://www.atguigu.com">联系我们</a>
+                </div>
+                <div class="copyRight">
+                    Copyright ?2017-2017atguigu.com 版权所有
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

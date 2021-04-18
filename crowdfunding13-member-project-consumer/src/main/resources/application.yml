@@ -1,0 +1,30 @@
+aliyun:
+  oss:
+    endPoint: 
+    bucketName: 
+    accessKeyId: 
+    accessKeySecret: 
+    bucketDomain: 
+
+spring:
+  application:
+    name: dzc-crowd-project
+  thymeleaf:
+    suffix: .html
+    prefix: classpath:/templates/
+  redis:
+    host: 192.168.154.101
+  session:
+    store-type: redis
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/
+
+server:
+  port: 5000

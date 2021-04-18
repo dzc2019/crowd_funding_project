@@ -1,0 +1,27 @@
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="commonHead">
+    <title>[[${title}]]</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <base th:href="@{/}">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link rel="stylesheet" href="/css/theme.css">
+    <script type="text/javascript" src="/jquery/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/script/docs.min.js"></script>
+    <script type="text/javascript" src="/layer/layer.js"></script>
+    <script type="text/javascript" src="/jquery/jquery.pagination.js"></script>
+</head>
+
+<div class="navbar-header" th:fragment="navbar-header">
+    <a class="navbar-brand" href="index.html" th:href="@{/}" style="font-size:32px;">尚筹网-创意产品众筹平台</a>
+</div>
+</html>
