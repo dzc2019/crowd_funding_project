@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72961938-afca-4419-a758-79678f2e51b3" name="Default Changelist" comment="" />
+    <list default="true" id="72961938-afca-4419-a758-79678f2e51b3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +43,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -65,6 +70,7 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1hzH1zIoZy9gT4gWkBlEgQh3uG3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -616,6 +622,7 @@
       <workItem from="1616726761310" duration="2546000" />
       <workItem from="1616842037198" duration="18615000" />
       <workItem from="1618043113722" duration="6000" />
+      <workItem from="1618737116676" duration="241000" />
     </task>
     <servers />
   </component>
@@ -691,10 +698,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="405" y="183" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1617008926482" />
-    <state x="298" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1617156796220">
+    <state x="298" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1618737347475">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="298" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1617156796220" />
+    <state x="298" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1618737347475" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

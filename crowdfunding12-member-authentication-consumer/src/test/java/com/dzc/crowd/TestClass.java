@@ -15,12 +15,12 @@ import java.util.Map;
 public class TestClass {
     @Test
     public void testMessageApi(){
-        String host = "https://zwp.market.alicloudapi.com";
-        String path = "/sms/sendv2";
+        String host = "";
+        String path = "";
         String method = "GET";
-        String appcode = "c959674907484fab84c1f8d87c943329";
+        String appcode = "";
         Map<String, String> headers = new HashMap<String, String>();
-        //最后在header中的格式(中间是英文空格)为Authorization:APPCODE 83359fd73fe94948385f570e3c139105
+        //最后在header中的格式(中间是英文空格)为Authorization:APPCODE 
         headers.put("Authorization", "APPCODE " + appcode);
         Map<String, String> querys = new HashMap<String, String>();
         querys.put("content", "【zc_deng的众筹网】您的验证码是888888，5分钟内有效。如非本人操作，请忽略本短信");
@@ -51,9 +51,9 @@ public class TestClass {
         String host = "https://zwp.market.alicloudapi.com";
         String path = "/sms/tmplist";
         String method = "GET";
-        String appcode = "c959674907484fab84c1f8d87c943329";
+        String appcode = "";
         Map<String, String> headers = new HashMap<String, String>();
-        //最后在header中的格式(中间是英文空格)为Authorization:APPCODE 83359fd73fe94948385f570e3c139105
+        //最后在header中的格式(中间是英文空格)为Authorization:APPCODE 
         headers.put("Authorization", "APPCODE " + appcode);
         Map<String, String> querys = new HashMap<String, String>();
 
@@ -82,9 +82,9 @@ public class TestClass {
         String host = "https://zwp.market.alicloudapi.com";
         String path = "/sms/edittemplete";
         String method = "POST";
-        String appcode = "c959674907484fab84c1f8d87c943329";
+        String appcode = "";
         Map<String, String> headers = new HashMap<String, String>();
-        //最后在header中的格式(中间是英文空格)为Authorization:APPCODE 83359fd73fe94948385f570e3c139105
+        //最后在header中的格式(中间是英文空格)为Authorization:APPCODE 
         headers.put("Authorization", "APPCODE " + appcode);
         Map<String, String> querys = new HashMap<String, String>();
         querys.put("content", "您的验证码是#code#，5分钟内有效。如非本人操作，请忽略本短信");
@@ -116,9 +116,9 @@ public class TestClass {
         String host = "https://zwp.market.alicloudapi.com";
         String path = "/sms/gettempletestatus";
         String method = "GET";
-        String appcode = "c959674907484fab84c1f8d87c943329";
+        String appcode = "";
         Map<String, String> headers = new HashMap<String, String>();
-        //最后在header中的格式(中间是英文空格)为Authorization:APPCODE 83359fd73fe94948385f570e3c139105
+        //最后在header中的格式(中间是英文空格)为Authorization:APPCODE 
         headers.put("Authorization", "APPCODE " + appcode);
         Map<String, String> querys = new HashMap<String, String>();
         querys.put("templateId", "2521");
