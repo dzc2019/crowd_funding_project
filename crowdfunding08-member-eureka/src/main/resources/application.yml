@@ -1,0 +1,15 @@
+server:
+  port: 1000
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+
+spring:
+  application:
+    name: dzc-crowd-eureka

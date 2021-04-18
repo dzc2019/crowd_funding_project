@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/commons/common-head::commonHead(title='用户注册')">
+<!--    前面加"/"：访问的路径是从服务器的根路径而言的，就是application.yml里面配置的context-path，
+上我我配置的是/learn-thymeleaf116，所以访问路径为http://localhost:9090/learn-thymeleaf116/images/1.png。-->
+<!--前面不加"/"：访问路径是相对于当前的路径而言的，
+比如上面的第二个，这个请求的的路径为http://localhost:9090/learn-thymeleaf116/I18n/aaa/use，
+相对于他的当前路径就是去掉use，所以最终的访问路径就是http://localhost:9090/learn-thymeleaf116/I18n/aaa/images/1.png-->
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div th:replace="/commons/common-head::navbar-header"></div>
+
+    </div>
+</nav>
+
+<div class="container">
+
+    <form class="form-signin" role="form" action="/auth/do/member/register" method="post">
+        <h2 class="form-signin-heading"><i class="glyphicon glyphicon-log-in"></i> 用户注册</h2>
+        <p style="color: red">[[${message}]]</p>
+        <div class="form-group has-success has-feedback">
+            <input name="loginacct" type="text" class="form-control" id="loginacct" placeholder="请输入登录账号" autofocus th:value="${registerMember!=null}?${registerMember.loginacct}">
+            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        </div>
+        <div class="form-group has-success has-feedback">
+            <input type="password" class="form-control" id="userpswd" name="userpswd" placeholder="请输入登录密码" style="margin-top:10px;" th:value="${registerMember!=null}?${registerMember.userpswd}">
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+        <div class="form-group has-success has-feedback">
+            <input type="password" class="form-control" id="username" name="username" placeholder="请输入用户名" style="margin-top:10px;" th:value="${registerMember!=null}?${registerMember.username}">
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+        <div class="form-group has-success has-feedback">
+            <input type="email" class="form-control" id="email" name="email" placeholder="请输入邮箱地址" style="margin-top:10px;" th:value="${registerMember!=null}?${registerMember.email}">
+            <span class="glyphicon glyphicon glyphicon-envelope form-control-feedback"></span>
+        </div>
+        <div class="form-group has-success has-feedback">
+            <input id="phoneNum" name="phoneNum" type="text" class="form-control"  placeholder="请输入手机号" style="margin-top:10px;" th:value="${registerMember!=null}?${registerMember.phoneNum}">
+            <span class="glyphicon glyphicon glyphicon-earphone form-control-feedback"></span>
+        </div>
+        <div class="form-group has-success has-feedback">
+            <input type="text" class="form-control" id="authCode" name="authCode" placeholder="请输入验证码" style="margin-top:10px;" th:value="${registerMember!=null}?${registerMember.authCode}">
+            <span class="glyphicon glyphicon glyphicon-comment form-control-feedback"></span>
+        </div>
+        <button id="sendBtn" type="button" class="btn btn-lg btn-success btn-block"> 获取验证码</button>
+        <button type="submit" class="btn btn-lg btn-success btn-block" > 注册</button>
+    </form>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#sendBtn").click(function () {
+            sendShortMessage();
+            return false;
+        });
+
+    });
+
+    function sendShortMessage() {
+        var phoneNum = $.trim($("#phoneNum").val());
+        if(phoneNum == "") {
+            layer.msg("请输入手机号");
+            return;
+        }
+
+        $.ajax({
+            url: "/auth/member/send/short/message.json",
+            type: "post",
+            data: {"phoneNum": phoneNum},
+            dataType: "json",
+            success: function (response) {
+                var result = response.operationResult;
+                if(result == "SUCCESS"){
+                    layer.msg("发送成功");
+                    window.forbiddenTime = 60 * 2;
+                    var timer = setInterval(function () {
+                        window.forbiddenTime -= 1;
+                        $('#sendBtn').text("获取验证码"+"("+ forbiddenTime + "s)");
+                    }, 1000);
+                    $('#sendBtn').attr("disabled",true);
+                    setTimeout(function () {
+                        $('#sendBtn').attr("disabled",false);
+                        clearInterval(timer);
+                        $('#sendBtn').text("获取验证码");
+                    }, 2 * 60 * 1000);
+                }else{
+                    layer.msg("发送失败，请重试！")
+                }
+            },
+            error: function (response) {
+                layer.msg(response.status + "：" + response.statusText);
+            }
+        });
+    }
+</script>
+</body>
+</html>

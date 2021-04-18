@@ -1,0 +1,22 @@
+server:
+  port: 6000
+spring:
+  application:
+    name: dzc-crowd-order
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:
+    host: 192.168.154.101
+  session:
+    store-type: redis
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/crowdfunding01-admin-parent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding01-admin-parent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding02-admin-webui/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding02-admin-webui/src/main/webapp/WEB-INF/admin-edit.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/crowdfunding02-admin-webui/src/main/webapp/WEB-INF/admin-page.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/crowdfunding03-admin-component/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding03-admin-component/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding04-admin-entity/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding04-admin-entity/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding07-member-parent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding07-member-parent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding08-member-eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding08-member-eureka/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding09-member-entity/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding09-member-entity/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding10-member-mysql-provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding10-member-mysql-provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding11-member-redis-provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding11-member-redis-provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding12-member-authentication-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding12-member-authentication-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding12-member-authentication-consumer/src/main/resources/templates/member-center.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding12-member-authentication-consumer/src/main/resources/templates/member-reg.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding13-member-project-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding13-member-project-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding14-member-order-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding14-member-order-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding15-member-pay-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding15-member-pay-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding16-member-zuul/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding16-member-zuul/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding17-member-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding17-member-api/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
